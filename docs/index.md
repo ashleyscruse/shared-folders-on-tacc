@@ -319,5 +319,5 @@ Always use `$WORK` for shared directories.
 ## Related Guides
 
 - [Getting Started with MSF](https://ashleyscruse.github.io/msf-getting-started/) — TACC account setup, SSH, first job
-- [Jupyter on TACC](https://ashleyscruse.github.io/jupyter-on-tacc/) — Running Jupyter notebooks on compute nodes
+- [Jupyter on HPC](https://ashleyscruse.github.io/jupyter-on-hpc/) — Running Jupyter notebooks on compute nodes
 - [SQL on HPC](https://ashleyscruse.github.io/sql-on-hpc/) — Querying large databases on TACC

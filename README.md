@@ -1,6 +1,6 @@
 # Shared Folders on HPC
 
-How to set up shared directories on TACC for classes, labs, and research teams.
+How to set up shared directories on HPC for classes, labs, and research teams.
 
 ## Guide
 

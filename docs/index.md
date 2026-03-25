@@ -5,21 +5,21 @@ title: Shared Folders on HPC
 
 # Shared Folders on HPC
 
-How to create directories on TACC that your students, collaborators, or research team can access. Useful for distributing datasets, sharing code, or collecting results.
+How to create directories on HPC that your students, collaborators, or research team can access. Useful for distributing datasets, sharing code, or collecting results.
 
 ---
 
-## How Sharing Works on TACC
+## How Sharing Works on HPC
 
-TACC uses standard Unix file permissions. Every file and folder has three levels of access:
+HPC systems use standard Unix file permissions. Every file and folder has three levels of access:
 
 | Who | Meaning |
 |-----|---------|
 | **Owner** (u) | You — the person who created it |
-| **Group** (g) | Everyone on your TACC allocation |
+| **Group** (g) | Everyone on your HPC allocation |
 | **Others** (o) | Everyone else on the system |
 
-When users are added to the same TACC allocation (project), they share a Unix group. This means you can give group-level access to files without opening them to the entire system.
+When users are added to the same HPC allocation (project), they share a Unix group. This means you can give group-level access to files without opening them to the entire system.
 
 ---
 
@@ -40,7 +40,7 @@ echo $WORK/shared
 
 Give students the full path that gets printed (e.g., `/work/12345/your_username/system_name/shared`). They access it with that path — `$WORK` only points to their own directory.
 
-> Replace `system_name` with the TACC system you're on: `vista`, `ls6`, `stampede3`, `frontera`, etc. This works the same on all TACC systems.
+> Replace `system_name` with the HPC system you're on: `vista`, `ls6`, `stampede3`, `frontera`, etc. This works the same on all systems.
 
 ---
 
@@ -318,6 +318,6 @@ Always use `$WORK` for shared directories.
 
 ## Related Guides
 
-- [Getting Started with MSF](https://ashleyscruse.github.io/msf-getting-started/) — TACC account setup, SSH, first job
+- [Getting Started with MSF](https://ashleyscruse.github.io/msf-getting-started/) — HPC account setup, SSH, first job
 - [Jupyter on HPC](https://ashleyscruse.github.io/jupyter-on-hpc/) — Running Jupyter notebooks on compute nodes
-- [SQL on HPC](https://ashleyscruse.github.io/sql-on-hpc/) — Querying large databases on TACC
+- [SQL on HPC](https://ashleyscruse.github.io/sql-on-hpc/) — Querying large databases on HPC

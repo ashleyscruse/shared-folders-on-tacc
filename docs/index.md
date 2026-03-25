@@ -38,7 +38,7 @@ chmod 755 $WORK/shared
 echo $WORK/shared
 ```
 
-Give students the full path that gets printed (e.g., `/work/10539/ashleyscruse/vista/shared`). They access it with that path — `$WORK` only points to their own directory.
+Give students the full path that gets printed (e.g., `/work/12345/your_username/vista/shared`). They access it with that path — `$WORK` only points to their own directory.
 
 ---
 
@@ -121,7 +121,7 @@ echo $WORK/shared
 This prints something like:
 
 ```
-/work/10539/ashleyscruse/vista/shared
+/work/12345/your_username/vista/shared
 ```
 
 **Give students this full path.** They cannot use `$WORK/shared` because `$WORK` expands to their own directory, not yours.
@@ -131,13 +131,13 @@ This prints something like:
 Students run:
 
 ```bash
-ls /work/10539/ashleyscruse/vista/shared
+ls /work/12345/your_username/vista/shared
 ```
 
 Or copy files to their own space:
 
 ```bash
-cp -r /work/10539/ashleyscruse/vista/shared/dataset $WORK/my_copy
+cp -r /work/12345/your_username/vista/shared/dataset $WORK/my_copy
 ```
 
 ---
@@ -158,7 +158,7 @@ cd $WORK/class_data
 wget https://example.com/large_dataset.csv
 
 # Tell students:
-# "The data is at /work/10539/ashleyscruse/vista/class_data"
+# "The data is at /work/12345/your_username/vista/class_data"
 # "Copy it to your own $WORK or read from it directly."
 ```
 
@@ -172,13 +172,13 @@ mkdir $WORK/submissions
 chmod 777 $WORK/submissions
 
 # Tell students:
-# "Copy your file to /work/10539/ashleyscruse/vista/submissions/"
+# "Copy your file to /work/12345/your_username/vista/submissions/"
 ```
 
 Students submit with:
 
 ```bash
-cp my_results.csv /work/10539/ashleyscruse/vista/submissions/my_name_results.csv
+cp my_results.csv /work/12345/your_username/vista/submissions/my_name_results.csv
 ```
 
 > **Note:** With 777, any user on the system can write to this directory. Use 775 if you only want allocation members to write.
@@ -209,7 +209,7 @@ cd $WORK/shared_db
 bash /path/to/setup_data.sh
 
 # Students read from your path:
-# sqlite3 /work/10539/ashleyscruse/vista/shared_db/nyc_taxi.db
+# sqlite3 /work/12345/your_username/vista/shared_db/nyc_taxi.db
 ```
 
 ---

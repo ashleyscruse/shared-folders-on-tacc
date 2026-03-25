@@ -38,7 +38,9 @@ chmod 755 $WORK/shared
 echo $WORK/shared
 ```
 
-Give students the full path that gets printed (e.g., `/work/12345/your_username/vista/shared`). They access it with that path — `$WORK` only points to their own directory.
+Give students the full path that gets printed (e.g., `/work/12345/your_username/system_name/shared`). They access it with that path — `$WORK` only points to their own directory.
+
+> Replace `system_name` with the TACC system you're on: `vista`, `ls6`, `stampede3`, `frontera`, etc. This works the same on all TACC systems.
 
 ---
 
@@ -53,7 +55,7 @@ groups
 You'll see something like:
 
 ```
-G-12345 ashleyscruse
+G-12345 your_username
 ```
 
 That `G-12345` is your allocation group. Everyone on the same allocation shares this group.
@@ -121,7 +123,7 @@ echo $WORK/shared
 This prints something like:
 
 ```
-/work/12345/your_username/vista/shared
+/work/12345/your_username/system_name/shared
 ```
 
 **Give students this full path.** They cannot use `$WORK/shared` because `$WORK` expands to their own directory, not yours.
@@ -131,13 +133,13 @@ This prints something like:
 Students run:
 
 ```bash
-ls /work/12345/your_username/vista/shared
+ls /work/12345/your_username/system_name/shared
 ```
 
 Or copy files to their own space:
 
 ```bash
-cp -r /work/12345/your_username/vista/shared/dataset $WORK/my_copy
+cp -r /work/12345/your_username/system_name/shared/dataset $WORK/my_copy
 ```
 
 ---
@@ -158,7 +160,7 @@ cd $WORK/class_data
 wget https://example.com/large_dataset.csv
 
 # Tell students:
-# "The data is at /work/12345/your_username/vista/class_data"
+# "The data is at /work/12345/your_username/system_name/class_data"
 # "Copy it to your own $WORK or read from it directly."
 ```
 
@@ -172,13 +174,13 @@ mkdir $WORK/submissions
 chmod 777 $WORK/submissions
 
 # Tell students:
-# "Copy your file to /work/12345/your_username/vista/submissions/"
+# "Copy your file to /work/12345/your_username/system_name/submissions/"
 ```
 
 Students submit with:
 
 ```bash
-cp my_results.csv /work/12345/your_username/vista/submissions/my_name_results.csv
+cp my_results.csv /work/12345/your_username/system_name/submissions/my_name_results.csv
 ```
 
 > **Note:** With 777, any user on the system can write to this directory. Use 775 if you only want allocation members to write.
@@ -209,7 +211,7 @@ cd $WORK/shared_db
 bash /path/to/setup_data.sh
 
 # Students read from your path:
-# sqlite3 /work/12345/your_username/vista/shared_db/nyc_taxi.db
+# sqlite3 /work/12345/your_username/system_name/shared_db/nyc_taxi.db
 ```
 
 ---
@@ -254,7 +256,7 @@ stat $WORK/shared
 The output of `ls -la` looks like:
 
 ```
-drwxrwxr-x  2 ashleyscruse G-12345  4096 Mar 24 10:00 shared
+drwxrwxr-x  2 your_username G-12345  4096 Mar 24 10:00 shared
 ```
 
 Reading left to right:
